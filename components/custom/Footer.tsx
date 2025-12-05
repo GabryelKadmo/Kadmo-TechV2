@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <footer className="relative w-full overflow-hidden bg-background">
+        <footer id="contact" className="relative w-full overflow-hidden bg-background scroll-mt-0">
             {/* Main Container */}
             <div className="relative flex min-h-screen flex-col justify-between px-6 py-12 md:px-12 md:py-16 lg:px-16">
 
@@ -64,10 +64,9 @@ export default function Footer() {
                             </p>
                             <div className="flex flex-col gap-3">
                                 {[
-                                    { name: 'GitHub', url: '#' },
-                                    { name: 'LinkedIn', url: '#' },
-                                    { name: 'Twitter', url: '#' },
-                                    { name: 'Instagram', url: '#' }
+                                    { name: 'GitHub', url: 'https://github.com/GabryelKadmo' },
+                                    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gabryel-kadmo/' },
+                                    { name: 'Instagram', url: 'https://www.instagram.com/kxdmx.tsx' }
                                 ].map((social) => (
                                     <a
                                         key={social.name}
