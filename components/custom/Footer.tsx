@@ -71,6 +71,8 @@ export default function Footer() {
                                     <a
                                         key={social.name}
                                         href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="group flex items-center gap-3 font-mono text-foreground transition-colors hover:text-foreground/80"
                                     >
                                         <span className="text-sm">{social.name}</span>
