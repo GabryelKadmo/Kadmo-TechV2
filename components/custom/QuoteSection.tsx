@@ -79,7 +79,7 @@ const philosophicalQuotes = [
     },
     {
         quote:
-            "A minha carne e o meu coração desfalecem; mas Deus é a fortaleza do meu coração, e a minha porção para sempre.",
+            "Ainda que minha mente e o meu corpo enfraqueçam, Deus é a minha força, ele é tudo o que preciso.",
         name: "Jesus Cristo",
         title: "Salmos 73:26",
     },
@@ -91,9 +91,15 @@ const philosophicalQuotes = [
     },
     {
         quote:
-            "O inferno está vazio, todos os demônios estão aqui.",
-        name: "William Shakespeare",
-        title: "Dramaturgo",
+            "Anda com quem te corriges. Porque quem aprova o teu pecado, não te ama.",
+        name: "Jesus Cristo",
+        title: "Hebreus 12:6",
+    },
+    {
+        quote:
+            "Ao vencido, ódio ou compaixão; ao vencedor, as batatas.",
+        name: "Machado de Assis",
+        title: "Escritor Brasileiro",
     },
     {
         quote:
@@ -106,11 +112,5 @@ const philosophicalQuotes = [
             "O segredo da mudança é focar toda a sua energia não em lutar contra o velho, mas em construir o novo.",
         name: "Sócrates",
         title: "Filósofo Grego",
-    },
-    {
-        quote:
-            "Ao sem talento, obsessão.",
-        name: "Matsuo Bashō",
-        title: "Poeta Japonês",
-    },
+    }
 ];
