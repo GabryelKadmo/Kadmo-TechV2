@@ -22,7 +22,7 @@ export default function HeroDesktop() {
                     {/* Top Eyebrow Text */}
                     <div className="pt-4 md:pt-8">
                         <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground md:text-sm">
-                            Desenvolvedor × Designer
+                            Front-end Developer
                         </p>
                     </div>
 
@@ -49,7 +49,7 @@ export default function HeroDesktop() {
                                     alt="Kadmo Portrait"
                                     width={500}
                                     height={667}
-                                    className="h-full w-full object-cover opacity-90 grayscale"
+                                    className="h-full w-full object-cover opacity-90 grayscale select-none"
                                 />
                             </div>
                             {/* Decorative border */}
@@ -62,8 +62,8 @@ export default function HeroDesktop() {
                         {/* Description */}
                         <div className="max-w-md">
                             <p className="font-mono text-sm leading-relaxed text-muted-foreground md:text-base">
-                                Full Stack Developer especializado em criar interfaces únicas e experiências memoráveis. Transformo ideias
-                                em produtos digitais de alto impacto.
+                                Desenvolvedor front-end especializado em criar interfaces modernas e performáticas.
+                                Bacharel em Sistemas de Informação, transformo ideias em experiências digitais memoráveis.
                             </p>
                         </div>
 

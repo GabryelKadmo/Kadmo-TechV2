@@ -35,8 +35,8 @@ export default function FeaturesSection() {
                         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
                             <GridItem
                                 icon={<Code2 className="h-5 w-5 text-foreground" />}
-                                title="Desenvolvimento Full Stack"
-                                description="Aplicações web completas com React, Next.js e Node.js. Do frontend ao backend."
+                                title="Desenvolvimento Front-end"
+                                description="Aplicações web modernas com React, Next.js e Angular. Código limpo e componentizado."
                             />
 
                             <GridItem

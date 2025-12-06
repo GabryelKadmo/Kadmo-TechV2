@@ -47,31 +47,15 @@ export default function AboutDesktop() {
                         {/* Main Description */}
                         <div className="space-y-6">
                             <p className="font-mono text-base leading-relaxed text-foreground md:text-lg">
-                                Sou desenvolvedor full stack apaixonado por criar produtos digitais que fazem a diferença.
-                                Combino código limpo com design intencional para entregar experiências que as pessoas realmente querem usar.
+                                Desenvolvedor front-end com formação em Sistemas de Informação, apaixonado por criar
+                                interfaces que unem estética e funcionalidade. Especializado em transformar conceitos
+                                em experiências digitais que as pessoas realmente querem usar.
                             </p>
 
                             <p className="font-mono text-base leading-relaxed text-muted-foreground md:text-lg">
-                                Minha abordagem é simples: entender o problema, criar soluções elegantes e executar com excelência.
-                                Cada projeto é uma oportunidade de aprender algo novo e elevar o padrão.
+                                Minha abordagem combina código limpo, design intencional e atenção aos detalhes.
+                                Cada projeto é uma oportunidade de criar algo excepcional e entregar valor real.
                             </p>
-                        </div>
-
-                        {/* Stats/Highlights */}
-                        <div className="grid grid-cols-2 gap-8 border-t border-border pt-8 md:gap-12">
-                            <div>
-                                <p className="mb-2 text-4xl font-normal text-foreground md:text-5xl">5+</p>
-                                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                                    Anos de Experiência
-                                </p>
-                            </div>
-
-                            <div>
-                                <p className="mb-2 text-4xl font-normal text-foreground md:text-5xl">50+</p>
-                                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                                    Projetos Concluídos
-                                </p>
-                            </div>
                         </div>
 
                         {/* Tech Stack */}
@@ -79,8 +63,8 @@ export default function AboutDesktop() {
                             <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
                                 Stack Principal
                             </p>
-                            <div className="flex flex-wrap gap-3">
-                                {['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind', 'PostgreSQL'].map((tech) => (
+                            <div className="flex flex-wrap gap-3 select-none">
+                                {['React', 'Next.js', 'Angular', 'Tailwind', 'Node.js', 'Python', 'MongoDB', 'MySQL'].map((tech) => (
                                     <span
                                         key={tech}
                                         className="border border-border px-4 py-2 font-mono text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"

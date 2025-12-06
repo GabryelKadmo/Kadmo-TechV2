@@ -96,7 +96,7 @@ export default function Footer() {
                 <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
                     <div className="max-w-md">
                         <p className="font-mono text-sm text-muted-foreground">
-                            © {new Date().getFullYear()} Gabryel Kadmo. Todos os direitos reservados.
+                            © {new Date().getFullYear()} Gabryel Kadmo. Bacharel em Sistemas de Informação.
                         </p>
                     </div>
 
