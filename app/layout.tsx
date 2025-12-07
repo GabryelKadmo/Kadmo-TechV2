@@ -23,28 +23,29 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kadmo Tech - Desenvolvimento Digital Sob Medida | Software, Landing Pages e Design",
-    template: "%s | Kadmo Tech"
+    default: "Gabryel Kadmo - Desenvolvedor Front-end | React, Next.js, Angular & Tailwind",
+    template: "%s | Gabryel Kadmo"
   },
-  description: "Gabryel Kadmo - Desenvolvedor Full Stack especializado em soluções digitais personalizadas. Software eficiente, landing pages que convertem e design de alta qualidade para impulsionar seu negócio.",
+  description: "Gabryel Kadmo - Desenvolvedor front-end especializado em criar interfaces modernas e performáticas. Bacharel em Sistemas de Informação, transformo ideias em experiências digitais memoráveis com React, Next.js, Angular e Tailwind CSS.",
   keywords: [
-    "desenvolvedor full stack",
-    "desenvolvimento software personalizado",
-    "landing pages otimizadas",
-    "design UX/UI",
-    "React",
+    "desenvolvedor front-end",
+    "React developer",
     "Next.js",
+    "Angular developer",
+    "Tailwind CSS",
     "TypeScript",
+    "interfaces modernas",
+    "design UX/UI",
     "desenvolvimento web",
-    "freelancer developer",
-    "soluções digitais",
     "aplicações web",
-    "desenvolvimento front-end",
-    "desenvolvimento back-end",
-    "consultoria tecnológica",
-    "kadmo tech",
+    "Node.js",
+    "Python",
+    "MongoDB",
+    "MySQL",
+    "sistemas de informação",
     "portfolio desenvolvedor",
-    "gabryel kadmo"
+    "gabryel kadmo",
+    "kadmo tech"
   ],
   authors: [{ name: "Gabryel Kadmo", url: "https://www.kadmo.tech" }],
   creator: "Gabryel Kadmo",
@@ -70,9 +71,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://www.kadmo.tech",
-    siteName: "Kadmo Tech",
-    title: "Kadmo Tech - Desenvolvimento Digital Sob Medida | Software, Landing Pages e Design",
-    description: "Desenvolvedor Full Stack especializado em soluções digitais personalizadas. Software eficiente, landing pages que convertem e design de alta qualidade para impulsionar seu negócio.",
+    siteName: "Gabryel Kadmo",
+    title: "Gabryel Kadmo - Desenvolvedor Front-end | React, Next.js, Angular & Tailwind",
+    description: "Desenvolvedor front-end especializado em criar interfaces modernas e performáticas. Bacharel em Sistemas de Informação, com expertise em React, Next.js, Angular e Tailwind CSS.",
     images: [
       {
         url: "https://www.kadmo.tech/SEO/SEOkadmo-tech.jpg",
@@ -87,8 +88,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@kadmotech",
     creator: "@kadmotech",
-    title: "Kadmo Tech - Desenvolvimento Digital Sob Medida | Software, Landing Pages e Design",
-    description: "Desenvolvedor Full Stack especializado em soluções digitais personalizadas. Software eficiente, landing pages que convertem e design de alta qualidade.",
+    title: "Gabryel Kadmo - Desenvolvedor Front-end | React, Next.js, Angular & Tailwind",
+    description: "Desenvolvedor front-end especializado em criar interfaces modernas e performáticas. Bacharel em Sistemas de Informação.",
     images: [
       {
         url: "https://www.kadmo.tech/SEO/SEOkadmo-tech.jpg",
@@ -112,8 +113,8 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "BR",
     "geo.placename": "Brasil",
-    "theme-color": "#000000",
-    "msapplication-TileColor": "#000000",
+    "theme-color": "#ef4444",
+    "msapplication-TileColor": "#ef4444",
     "msapplication-config": "/browserconfig.xml",
   },
 };
