@@ -6,6 +6,7 @@ export default function ConsoleGreeting() {
     useEffect(() => {
         const styles = {
             title: 'font-size: 32px; font-weight: bold; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);',
+            subtitle: 'font-size: 20px; font-weight: bold; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);',
         }
 
         console.clear()
@@ -25,7 +26,8 @@ export default function ConsoleGreeting() {
 ██║  ██╗██║  ██║██████╔╝██║ ╚═╝ ██║╚██████╔╝             
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝ ╚═════╝              
         `, 'color: #00ff88;')
-        console.log('%c👋 Olá, Curió! Fuçando meu código? 😏', styles.title)
+        console.log('%c👋 Olá, Curió!😏', styles.title)
+        console.log('%cEntre em contato: contato@kadmo.tech', styles.subtitle)
     }, [])
 
     return null
