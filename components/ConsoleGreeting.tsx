@@ -26,7 +26,7 @@ export default function ConsoleGreeting() {
 ██║  ██╗██║  ██║██████╔╝██║ ╚═╝ ██║╚██████╔╝             
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝ ╚═════╝              
         `, 'color: #00ff88;')
-        console.log('%c👋 Olá, Curió!😏', styles.title)
+        console.log('%c👋 Olá, Curió! Fuçando meu código?😏', styles.title)
         console.log('%cEntre em contato: contato@kadmo.tech', styles.subtitle)
     }, [])
 
