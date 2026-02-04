@@ -11,7 +11,7 @@ Allow: /robots.txt
 Allow: /sitemap.xml
 
 # Sitemap location
-Sitemap: https://www.kadmo.tech/sitemap.xml
+Sitemap: https://www.kadmo.com.br/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1
