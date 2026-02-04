@@ -50,10 +50,10 @@ export default function Footer() {
                                 Email
                             </p>
                             <a
-                                href="mailto:contato@kadmo.tech"
+                                href="mailto:contato@kadmo.com.br"
                                 className="group font-mono text-lg text-foreground transition-colors hover:text-foreground/80 md:text-xl"
                             >
-                                contato@kadmo.tech
+                                contato@kadmo.com.br
                             </a>
                         </div>
 
