@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "-WzZ89JmhH0Sun7xXiw1Gx22IXJAoRFtDDUyhIwSRW8",
+    google: "WX1UoC3_TZdcqQyJnDrJAKYFZtGDoEpdkFM0EN-rt30",
   },
   alternates: {
     canonical: "https://www.kadmo.com.br",
