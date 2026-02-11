@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
   const subdomain = host.split(".")[0];
 
   // Lista de subdomínios válidos - Exemplo: const validSubdomains = ['portfolio', 'exemplo'];
-  const validSubdomains = ["portfolio"];
+  const validSubdomains = ["portfolio", "templates"];
 
   // Se for o domínio principal (www ou kadmo), não faz nada
   if (
