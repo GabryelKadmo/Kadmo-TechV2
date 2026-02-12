@@ -61,21 +61,21 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                         <button
                             onClick={() => scrollToSection(item.id)}
                             className={`
-                group flex items-center gap-3 text-sm font-medium transition-all duration-200
-                ${activeSection === item.id
+                                group flex items-center gap-3 text-sm font-medium transition-all duration-200
+                                ${activeSection === item.id
                                     ? "text-white"
                                     : "text-gray-400 hover:text-white"
                                 }
-              `}
+                            `}
                         >
                             <span
                                 className={`
-                  h-px transition-all duration-200
-                  ${activeSection === item.id
+                                    h-px transition-all duration-200
+                                    ${activeSection === item.id
                                         ? "w-8 bg-gray-300"
                                         : "w-4 bg-gray-600 group-hover:w-6 group-hover:bg-gray-400"
                                     }
-                `}
+                                `}
                             />
                             <span className="whitespace-nowrap">{item.title}</span>
                         </button>

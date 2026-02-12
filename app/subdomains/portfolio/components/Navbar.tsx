@@ -72,7 +72,7 @@ export default function Navbar() {
             </header>
 
             {/* Mobile Bottom Navigation */}
-            <nav className="md:hidden fixed bottom-6 left-4 right-4 z-50">
+            <nav className="md:hidden fixed top-6 left-4 right-4 z-50">
                 <div className="flex items-center justify-center gap-1 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full p-1.5 shadow-2xl">
                     {/* Home - apenas ícone */}
                     <Link
