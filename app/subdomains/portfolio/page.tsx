@@ -40,7 +40,7 @@ export default function PortfolioPage() {
 
                             {/* Location */}
                             <div className="flex items-center gap-2 text-sm text-gray-300">
-                                <MapPin className="w-4 h-4 text-red-400" />
+                                <MapPin className="w-4 h-4 text-gray-400" />
                                 <span>{t.profile.location}</span>
                             </div>
 
@@ -91,7 +91,7 @@ export default function PortfolioPage() {
                                 {/* Social Links */}
                                 <div className="flex flex-wrap gap-3 mb-12">
                                     <a
-                                        href="https://github.com/gabriyelkadmo"
+                                        href="https://github.com/gabryelkadmo"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-white/20 transition-all duration-200 text-gray-300 hover:text-white"
@@ -100,7 +100,7 @@ export default function PortfolioPage() {
                                         <span className="text-sm font-medium">{t.social.github}</span>
                                     </a>
                                     <a
-                                        href="https://linkedin.com/in/gabriyelkadmo"
+                                        href="https://linkedin.com/in/gabryel-kadmo"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-white/20 transition-all duration-200 text-gray-300 hover:text-white"
@@ -109,16 +109,16 @@ export default function PortfolioPage() {
                                         <span className="text-sm font-medium">{t.social.linkedin}</span>
                                     </a>
                                     <a
-                                        href="https://threads.net/@gabriyelkadmo"
+                                        href="https://www.kadmo.com.br/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-white/20 transition-all duration-200 text-gray-300 hover:text-white"
                                     >
                                         <Globe className="w-4 h-4" />
-                                        <span className="text-sm font-medium">{t.social.threads}</span>
+                                        <span className="text-sm font-medium">{t.social.website}</span>
                                     </a>
                                     <a
-                                        href="mailto:contato@kadmo.tech"
+                                        href="mailto:gabryelkadmo@gmail.com"
                                         className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-white/20 transition-all duration-200 text-gray-300 hover:text-white"
                                     >
                                         <Mail className="w-4 h-4" />
@@ -240,6 +240,61 @@ export default function PortfolioPage() {
                     </main>
                 </div>
             </div>
+
+            {/* Footer */}
+            <footer className="border-t border-white/10 mt-20">
+                <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                        {/* Slogan */}
+                        <p className="text-gray-400 text-sm italic">
+                            {t.footer.slogan}
+                        </p>
+
+                        {/* Social Icons */}
+                        <div className="flex items-center gap-4">
+                            <a
+                                href="https://github.com/gabryelkadmo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="GitHub"
+                            >
+                                <Github className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/gabryel-kadmo/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="LinkedIn"
+                            >
+                                <Linkedin className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://www.kadmo.com.br/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="Website"
+                            >
+                                <Globe className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="mailto:gabryelkadmo@gmail.com"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="Email"
+                            >
+                                <Mail className="w-5 h-5" />
+                            </a>
+                        </div>
+
+                        {/* Copyright */}
+                        <p className="text-gray-500 text-sm">
+                            © {new Date().getFullYear()} Gabryel Kadmo. {t.footer.copyright}
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </>
     );
 }

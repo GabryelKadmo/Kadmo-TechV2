@@ -26,7 +26,7 @@ export const translations = {
     social: {
       github: "GitHub",
       linkedin: "LinkedIn",
-      threads: "Threads",
+      website: "Website",
       email: "Email",
     },
     work: {
@@ -112,6 +112,10 @@ export const translations = {
         },
       },
     },
+    footer: {
+      slogan: "Transformando ideias em experiências digitais.",
+      copyright: "Todos os direitos reservados.",
+    },
   },
   en: {
     nav: {
@@ -140,7 +144,7 @@ export const translations = {
     social: {
       github: "GitHub",
       linkedin: "LinkedIn",
-      threads: "Threads",
+      website: "Website",
       email: "Email",
     },
     work: {
@@ -225,6 +229,10 @@ export const translations = {
           azure: "Azure DevOps",
         },
       },
+    },
+    footer: {
+      slogan: "Transforming ideas into digital experiences.",
+      copyright: "All rights reserved.",
     },
   },
 } as const;
