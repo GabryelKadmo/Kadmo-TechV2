@@ -4,21 +4,30 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
   const url = request.nextUrl.clone();
   const host = hostname.split(":")[0];
-  const subdomain = host.split(".")[0];
 
-  // Lista de subdomínios válidos - Exemplo: const validSubdomains = ['portfolio', 'exemplo'];
+  // Remove 'www.' se presente para normalizar o hostname
+  const normalizedHost = host.replace(/^www\./, "");
+
+  // Pega as partes do hostname
+  const hostParts = normalizedHost.split(".");
+
+  // Lista de subdomínios válidos
   const validSubdomains = ["portfolio", "templates"];
 
-  // Se for o domínio principal (www ou kadmo), não faz nada
-  if (
-    subdomain === "www" ||
-    subdomain === "kadmo" ||
-    subdomain === "localhost"
-  ) {
+  // Domínios principais (sem subdomínio de aplicação)
+  // Ex: kadmo.com.br, kadmo.tech, localhost
+  const mainDomains = ["kadmo", "localhost"];
+
+  // Se o primeiro segmento for um domínio principal, não faz nada
+  // Isso cobre: kadmo.com.br, kadmo.tech, localhost
+  if (mainDomains.includes(hostParts[0])) {
     return NextResponse.next();
   }
 
-  // Se for um subdomínio válido, reescreve a URL
+  // Agora verifica se o primeiro segmento é um subdomínio válido
+  // Isso cobre: portfolio.kadmo.com.br, portfolio.kadmo.tech
+  const subdomain = hostParts[0];
+
   if (validSubdomains.includes(subdomain)) {
     url.pathname = `/subdomains/${subdomain}${url.pathname}`;
     return NextResponse.rewrite(url);
