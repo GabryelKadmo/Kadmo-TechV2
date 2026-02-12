@@ -56,7 +56,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "1",
+    id: "mx2tech",
     name: "WebSite MX2TECH",
     slug: "MX2TECH",
     description:
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "2",
+    id: "silvaesilva",
     name: "Silva & Silva Imobiliária",
     slug: "SILVA & SILVA",
     description:
@@ -202,7 +202,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "3",
+    id: "myhubs",
     name: "My Hubs",
     slug: "MY HUBS",
     description:
@@ -265,7 +265,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "999",
+    id: "lorem-ipsum",
     name: "Lorem Ipsum",
     slug: "LOREM IPSUM",
     description:
