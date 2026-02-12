@@ -19,7 +19,8 @@ export default function VideoTextSection() {
                 {/* Main Video Text */}
                 <div className="relative z-10 mx-auto flex h-[300px] w-full max-w-6xl items-center justify-center md:h-[400px] lg:h-[500px]">
                     <VideoText
-                        src="https://www.pexels.com/pt-br/download/video/34645210/"
+                        // src="https://www.pexels.com/pt-br/download/video/34645210/"
+                        src="/videos/tech-circuits.mp4"
                         fontSize={20}
                         fontWeight="bold"
                         fontFamily="var(--font-geist-sans)"
