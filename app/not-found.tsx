@@ -3,30 +3,51 @@ import Link from 'next/link';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { Briefcase, Package, ArrowUpRight } from 'lucide-react';
 import { getFeaturedProjects } from '@/data/projects';
+import { headers } from 'next/headers';
 
-// Subdomínios disponíveis
-const subdomains = [
-    {
-        name: 'Portfolio',
-        description: 'Veja meus projetos e trabalhos',
-        href: 'https://portfolio.kadmo.com.br',
-        icon: <Briefcase className="h-5 w-5 text-foreground" />,
-    },
-    {
-        name: 'Templates',
-        description: 'Templates prontos para usar',
-        href: 'https://templates.kadmo.com.br',
-        icon: <Package className="h-5 w-5 text-foreground" />,
-    },
-];
+// Função para construir URLs de subdomínios dinamicamente
+async function getSubdomainUrl(subdomain: string) {
+    const headersList = await headers();
+    const host = headersList.get('host') || '';
+    const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
 
-export default function NotFound() {
+    // Se estiver em localhost, mantém localhost
+    if (host.includes('localhost')) {
+        const port = host.split(':')[1] || '3000';
+        return `${protocol}://${subdomain}.localhost:${port}`;
+    }
+
+    // Em produção, adiciona o subdomínio ao domínio principal
+    const baseDomain = host.replace(/^[^.]+\./, ''); // Remove subdomínio existente se houver
+    return `${protocol}://${subdomain}.${baseDomain}`;
+}
+
+export default async function NotFound() {
+    // Construir URLs dos subdomínios
+    const portfolioUrl = await getSubdomainUrl('portfolio');
+    const templatesUrl = await getSubdomainUrl('templates');
+
+    // Subdomínios disponíveis
+    const subdomains = [
+        {
+            name: 'Portfolio',
+            description: 'Veja meus projetos e trabalhos',
+            href: portfolioUrl,
+            icon: <Briefcase className="h-5 w-5 text-foreground" />,
+        },
+        {
+            name: 'Templates',
+            description: 'Templates prontos para usar',
+            href: templatesUrl,
+            icon: <Package className="h-5 w-5 text-foreground" />,
+        },
+    ];
+
     // Busca projetos com destaque
     const featuredProjects = getFeaturedProjects();
 
     return (
         <main className="relative min-h-screen w-full overflow-hidden bg-background">
-            {/* Background Grid Pattern */}
             <div
                 className="pointer-events-none absolute inset-0 opacity-[0.03]"
                 style={{
@@ -38,9 +59,7 @@ export default function NotFound() {
                 }}
             />
 
-            {/* Main Container */}
             <div className="relative flex min-h-screen flex-col justify-between px-6 py-12 md:px-12 md:py-16 lg:px-16">
-                {/* Top - Logo */}
                 <div className="pt-4 md:pt-8">
                     <Link href="/" className="inline-block">
                         <Image
@@ -53,9 +72,7 @@ export default function NotFound() {
                     </Link>
                 </div>
 
-                {/* Central Content */}
                 <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20 items-center">
-                    {/* Left Side - Typography */}
                     <div className="space-y-6">
                         <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground md:text-sm">
                             Erro 404
@@ -77,9 +94,7 @@ export default function NotFound() {
                         </p>
                     </div>
 
-                    {/* Right Side - Cards */}
                     <div className="space-y-8">
-                        {/* Subdomínios */}
                         <div>
                             <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground mb-4">
                                 Explorar
@@ -121,7 +136,6 @@ export default function NotFound() {
                             </ul>
                         </div>
 
-                        {/* Preview de Projetos */}
                         <div>
                             <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground mb-4">
                                 Projetos Recentes
@@ -163,7 +177,6 @@ export default function NotFound() {
                     </div>
                 </div>
 
-                {/* Bottom Section */}
                 <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
                     <Link
                         href="/"
