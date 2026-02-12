@@ -74,7 +74,14 @@ export const projects: Project[] = [
         "/projects/mx2tech/mx2tech-03.png",
       ],
     },
-    technologies: ["Exemplo", "Exemplo", "Exemplo"],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Acertenity UI",
+      "Magic UI",
+      "React Bits",
+    ],
     category: "web", // "web" | "mobile" | "design" | "other"
     tags: [
       "web",
@@ -122,6 +129,138 @@ export const projects: Project[] = [
         "soluções tech",
         "mx2tech",
         "nextjs",
+      ],
+    },
+  },
+  {
+    id: "2",
+    name: "Silva & Silva Imobiliária",
+    slug: "SILVA & SILVA",
+    description:
+      "Plataforma imobiliária 'Digital First' focada na região de Ribeirão Preto. O projeto nasceu da união entre expertise de mercado e tecnologia para eliminar burocracias, permitindo aluguel sem fiador e processos 100% online, do agendamento à assinatura do contrato.",
+    shortDescription:
+      "Imobiliária digital que une agilidade e transparência para o interior paulista",
+    link: "https://silvaesilvaimobiliaria.vercel.app/",
+    github: "",
+    images: {
+      thumbnail: "/projects/silvaesilva/thumbnail.png",
+      cover: "/projects/silvaesilva/cover.png",
+      gallery: [
+        "/projects/silvaesilva/silvaesilva-01.png",
+        "/projects/silvaesilva/silvaesilva-02.png",
+        "/projects/silvaesilva/silvaesilva-03.png",
+      ],
+    },
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Supabase",
+      "Framer Motion",
+    ],
+    category: "web", // "web" | "mobile" | "design" | "other"
+    tags: ["PropTech", "Imobiliária", "SaaS", "Marketplace"],
+    featured: true,
+    status: "in-progress", // "completed" | "in-progress" | "archived"
+    dates: {
+      started: "2024-08",
+      finished: "2025-02",
+      duration: "6 meses",
+    },
+    details: {
+      purpose:
+        "Redefinir a experiência de compra e aluguel em Ribeirão Preto, oferecendo uma alternativa ágil às imobiliárias tradicionais com foco em resposta rápida (12x acima da média) e desburocratização.",
+      challenge:
+        "Criar um ecossistema que integrasse listagem de imóveis de alto padrão e lançamentos (MCMV) com um fluxo de contratação digital seguro, mantendo a interface amigável para usuários menos tecnológicos.",
+      solution:
+        "Desenvolvimento de uma plataforma SPA (Single Page Application) com Next.js, integrando APIs de assinatura digital e um sistema de agendamento automatizado que garante o SLA de atendimento de 30 minutos.",
+      learnings: [
+        "Implementação de filtros complexos de busca imobiliária",
+        "Integração com CRMs imobiliários via API",
+        "Otimização de SEO local para competir com grandes portais (Zap/VivaReal)",
+      ],
+      highlights: [
+        "Sistema de 'Aluguel sem Fiador' integrado",
+        "Carregamento ultra-rápido de imagens de alta resolução",
+        "Dashboard administrativo para corretores gerenciarem leads",
+      ],
+      role: "Lead Developer & UI Designer",
+      client: "Silva & Silva",
+      teamSize: 4,
+    },
+    seo: {
+      title: "Silva & Silva | A Nova Era Imobiliária em Ribeirão Preto",
+      description:
+        "Conheça a plataforma da Silva & Silva. Alugue e compre imóveis online, sem fiador e com atendimento 12x mais rápido. Tecnologia e confiança em um só lugar.",
+      keywords: [
+        "imobiliária digital",
+        "ribeirão preto",
+        "aluguel sem fiador",
+        "proptech",
+        "apartamento na planta",
+      ],
+    },
+  },
+  {
+    id: "3",
+    name: "My Hubs",
+    slug: "MY HUBS",
+    description:
+      "Ecossistema de soluções B2B focado na automação de processos comerciais para distribuidoras e atacado. A plataforma atua como um hub centralizador que conecta ERPs legados (como WinThor e Consinco) a interfaces web modernas, oferecendo E-commerce B2B, BI e gestão de pedidos em tempo real.",
+    shortDescription:
+      "Plataforma de integração e automação de pedidos para distribuidoras com conexões ERP nativas.",
+    link: "https://myhubs.com.br",
+    github: "",
+    images: {
+      thumbnail: "/projects/myhubs/thumb.webp",
+      cover: "/projects/myhubs/cover.webp",
+      gallery: [
+        "/projects/myhubs/myhubs-01.png",
+        "/projects/myhubs/myhubs-02.png",
+        "/projects/myhubs/myhubs-03.png",
+      ],
+    },
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+    category: "web",
+    tags: ["SaaS", "B2B", "Integração ERP", "Dashboard", "Automação"],
+    featured: true,
+    status: "completed",
+    dates: {
+      started: "2025-06",
+      finished: "2026-02",
+      duration: "8 meses",
+    },
+    details: {
+      purpose:
+        "Resolver a fragmentação de dados no setor atacadista, eliminando o trabalho manual de digitação de pedidos e criando uma ponte confiável entre a força de vendas e os sistemas de gestão (ERPs) robustos do mercado.",
+      challenge:
+        "O principal desafio técnico foi desenvolver 'conectores' estáveis para ERPs complexos (TOTVS WinThor/Consinco) que garantissem a sincronização de estoque e preços em tempo real, sem impactar a performance do banco de dados do cliente.",
+      solution:
+        "Desenvolvimento de uma arquitetura baseada em microsserviços para as integrações, isolando o tráfego do ERP da interface do usuário. O frontend consome uma API otimizada que entrega dados de BI instantaneamente.",
+      learnings: [
+        "Arquitetura de sistemas distribuídos e filas de processamento.",
+        "Regras de negócio complexas do setor de distribuição e logística.",
+        "Visualização de dados (Data Viz) para tomadores de decisão.",
+      ],
+      highlights: [
+        "Mais de 120 empresas atendidas e 20+ integrações ativas.",
+        "Redução drástica de erros operacionais (digitação de pedidos).",
+        "Dashboard de BI que centraliza indicadores de vendas e performance.",
+      ],
+      role: "Lead Full-stack Developer",
+      client: "My Hubs Tecnologia",
+      teamSize: 3,
+    },
+    seo: {
+      title: "My Hubs | Automação e Integração de ERPs para Distribuidoras",
+      description:
+        "Solução completa para conectar sua distribuidora ao futuro. Integração com TOTVS, WinThor e Consinco, E-commerce B2B e Business Intelligence em uma única plataforma.",
+      keywords: [
+        "integração erp",
+        "totvs winthor",
+        "automação de pedidos",
+        "ecommerce b2b",
+        "dashboard de vendas",
       ],
     },
   },
