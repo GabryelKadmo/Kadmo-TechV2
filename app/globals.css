@@ -301,3 +301,65 @@
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+/* ===== Otimizações para notebooks/laptops (< Full HD) ===== */
+@media (min-width: 1024px) and (max-width: 1919px) {
+  /* Reduzir padding top geral */
+  .portfolio-wrapper {
+    padding-top: 3.5rem !important;
+  }
+
+  /* Sidebar: avatar menor e sticky mais alto */
+  .portfolio-sidebar-sticky {
+    top: 5rem !important;
+    gap: 0.5rem !important;
+  }
+  .portfolio-avatar {
+    width: 7rem !important;
+    height: 7rem !important;
+  }
+
+  /* Hero section */
+  .portfolio-hero {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  .portfolio-hero-name {
+    font-size: 2.8rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .portfolio-hero-role {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .portfolio-social-links {
+    margin-bottom: 1.25rem !important;
+  }
+  .portfolio-bio {
+    gap: 0.35rem !important;
+  }
+  .portfolio-bio p {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Sections */
+  .portfolio-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .portfolio-section-title {
+    font-size: 1.65rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Technical skills spacing */
+  .portfolio-skills-grid {
+    gap: 1.25rem !important;
+  }
+
+  /* Footer */
+  .portfolio-footer {
+    margin-top: 2rem !important;
+  }
+}
