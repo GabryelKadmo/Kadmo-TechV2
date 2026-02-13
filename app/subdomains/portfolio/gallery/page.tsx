@@ -5,7 +5,7 @@ import { useLocale } from "../contexts/LocaleContext";
 import { translations } from "../locales/translations";
 import Breadcrumb from "../components/Breadcrumb";
 import { certificates, Certificate } from "../data/certificates";
-import { Calendar, Award, Clock, FileText, Download, X } from "lucide-react";
+import { Calendar, Award, Clock, FileText, Download, X, Github, Linkedin, Globe, Mail } from "lucide-react";
 import Image from "next/image";
 
 export default function GalleryPage() {
@@ -199,6 +199,61 @@ export default function GalleryPage() {
                     </div>
                 </div>
             )}
+
+            {/* Footer */}
+            <footer className="portfolio-footer border-t border-white/10 mt-12 sm:mt-20">
+                <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8 sm:py-12">
+                    <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
+                        {/* Slogan */}
+                        <p className="text-gray-400 text-sm italic">
+                            {t.footer.slogan}
+                        </p>
+
+                        {/* Social Icons */}
+                        <div className="flex items-center gap-4">
+                            <a
+                                href="https://github.com/gabryelkadmo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="GitHub"
+                            >
+                                <Github className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/gabryel-kadmo/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="LinkedIn"
+                            >
+                                <Linkedin className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="https://www.kadmo.com.br/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="Website"
+                            >
+                                <Globe className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="mailto:gabryelkadmo@gmail.com"
+                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                                aria-label="Email"
+                            >
+                                <Mail className="w-5 h-5" />
+                            </a>
+                        </div>
+
+                        {/* Copyright */}
+                        <p className="text-gray-500 text-sm">
+                            © {new Date().getFullYear()} Gabryel Kadmo. {t.footer.copyright}
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </>
     );
 }
