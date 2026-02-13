@@ -22,7 +22,7 @@ export default function PortfolioPage() {
         <>
             <TableOfContents items={sections} />
 
-            <div className="portfolio-wrapper pt-20 sm:pt-24 px-4 lg:px-8">
+            <div className="portfolio-wrapper pt-20 sm:pt-24 lg:pt-28 px-4 lg:px-8">
                 {/* Mobile Profile Header */}
                 <div className="lg:hidden max-w-3xl mx-auto mb-8">
                     <div className="flex items-center gap-4 pt-10">
@@ -60,12 +60,12 @@ export default function PortfolioPage() {
                     <aside className="hidden lg:block w-64 flex-shrink-0">
                         <div className="portfolio-sidebar-sticky sticky top-32 flex flex-col items-center gap-4">
                             {/* Avatar */}
-                            <div className="portfolio-avatar w-40 h-40 rounded-full overflow-hidden border-2 border-white/10">
+                            <div className="portfolio-avatar w-48 h-48 rounded-full overflow-hidden border-2 border-white/10">
                                 <Image
                                     src="/portfolio/Balduino IV.jpg"
                                     alt="Profile"
-                                    width={160}
-                                    height={160}
+                                    width={192}
+                                    height={192}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
