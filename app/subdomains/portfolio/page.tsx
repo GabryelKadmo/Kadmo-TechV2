@@ -22,7 +22,7 @@ export default function PortfolioPage() {
         <>
             <TableOfContents items={sections} />
 
-            <div className="pt-20 sm:pt-24 px-4 lg:px-8">
+            <div className="portfolio-wrapper pt-20 sm:pt-24 px-4 lg:px-8">
                 {/* Mobile Profile Header */}
                 <div className="lg:hidden max-w-3xl mx-auto mb-8">
                     <div className="flex items-center gap-4 pt-10">
@@ -58,9 +58,9 @@ export default function PortfolioPage() {
                 <div className="max-w-7xl mx-auto flex gap-12">
                     {/* Profile Sidebar - Sticky (Desktop only) */}
                     <aside className="hidden lg:block w-64 flex-shrink-0">
-                        <div className="sticky top-32 flex flex-col items-center gap-4">
+                        <div className="portfolio-sidebar-sticky sticky top-32 flex flex-col items-center gap-4">
                             {/* Avatar */}
-                            <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-white/10">
+                            <div className="portfolio-avatar w-40 h-40 rounded-full overflow-hidden border-2 border-white/10">
                                 <Image
                                     src="/portfolio/Balduino IV.jpg"
                                     alt="Profile"
@@ -91,7 +91,7 @@ export default function PortfolioPage() {
                     {/* Main Content */}
                     <main className="flex-1 max-w-3xl mx-auto lg:mx-0">
                         {/* Hero Section */}
-                        <section id="introduction" className="min-h-auto py-1 sm:py-20 flex items-center">
+                        <section id="introduction" className="portfolio-hero min-h-auto py-1 sm:py-20 flex items-center">
                             <div>
                                 {/* Schedule Badge */}
                                 {/* <a
@@ -113,15 +113,15 @@ export default function PortfolioPage() {
                                 </a> */}
 
                                 {/* Name and Title */}
-                                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-3 sm:mb-4 text-white bg-clip-text">
+                                <h1 className="portfolio-hero-name text-4xl sm:text-5xl md:text-7xl font-bold mb-3 sm:mb-4 text-white bg-clip-text">
                                     Gabryel Kadmo
                                 </h1>
-                                <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-6 sm:mb-8">
+                                <p className="portfolio-hero-role text-lg sm:text-xl md:text-2xl text-gray-400 mb-6 sm:mb-8">
                                     {t.hero.role}
                                 </p>
 
                                 {/* Social Links */}
-                                <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-12">
+                                <div className="portfolio-social-links flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-12">
                                     <a
                                         href="https://github.com/gabryelkadmo"
                                         target="_blank"
@@ -159,7 +159,7 @@ export default function PortfolioPage() {
                                 </div>
 
                                 {/* Biography */}
-                                <div className="text-base sm:text-lg text-gray-300 leading-relaxed space-y-3 sm:space-y-4">
+                                <div className="portfolio-bio text-base sm:text-lg text-gray-300 leading-relaxed space-y-3 sm:space-y-4">
                                     <p>
                                         {t.hero.bio1}
                                     </p>
@@ -171,8 +171,8 @@ export default function PortfolioPage() {
                         </section>
 
                         {/* Work Experience Section */}
-                        <section id="work-experience" className="min-h-auto flex flex-col justify-center py-12 sm:py-20">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-white uppercase tracking-tight">
+                        <section id="work-experience" className="portfolio-section min-h-auto flex flex-col justify-center py-12 sm:py-20">
+                            <h2 className="portfolio-section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-white uppercase tracking-tight">
                                 {t.work.title}
                             </h2>
 
@@ -188,8 +188,8 @@ export default function PortfolioPage() {
                         </section>
 
                         {/* Studies Section */}
-                        <section id="studies" className="min-h-auto flex flex-col justify-center py-12 sm:py-20">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-white uppercase tracking-tight">
+                        <section id="studies" className="portfolio-section min-h-auto flex flex-col justify-center py-12 sm:py-20">
+                            <h2 className="portfolio-section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-white uppercase tracking-tight">
                                 {t.studies.title}
                             </h2>
 
@@ -202,12 +202,12 @@ export default function PortfolioPage() {
                         </section>
 
                         {/* Technical Skills Section */}
-                        <section id="technical-skills" className="min-h-auto flex flex-col justify-center py-12 sm:py-20">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-white uppercase tracking-tight">
+                        <section id="technical-skills" className="portfolio-section min-h-auto flex flex-col justify-center py-12 sm:py-20">
+                            <h2 className="portfolio-section-title text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-white uppercase tracking-tight">
                                 {t.technical.title}
                             </h2>
 
-                            <div className="space-y-8 sm:space-y-12">
+                            <div className="portfolio-skills-grid space-y-8 sm:space-y-12">
                                 {/* Front-end */}
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 uppercase tracking-tight">
@@ -274,7 +274,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Footer */}
-            <footer className="border-t border-white/10 mt-12 sm:mt-20">
+            <footer className="portfolio-footer border-t border-white/10 mt-12 sm:mt-20">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8 sm:py-12">
                     <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
                         {/* Slogan */}
