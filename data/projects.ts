@@ -67,12 +67,12 @@ export const projects: Project[] = [
     link: "https://mx2tech.com.br",
     github: "",
     images: {
-      thumbnail: "/projects/mx2tech/mx2tech-thumbnail.png",
-      cover: "/projects/mx2tech/cover.png",
+      thumbnail: "/portfolio/projects/mx2tech/mx2tech-thumbnail.png",
+      cover: "/portfolio/projects/mx2tech/cover.png",
       gallery: [
-        "/projects/mx2tech/mx2tech-01.png",
-        "/projects/mx2tech/mx2tech-02.png",
-        "/projects/mx2tech/mx2tech-03.png",
+        "/portfolio/projects/mx2tech/mx2tech-01.png",
+        "/portfolio/projects/mx2tech/mx2tech-02.png",
+        "/portfolio/projects/mx2tech/mx2tech-03.png",
       ],
     },
     technologies: [
@@ -145,12 +145,12 @@ export const projects: Project[] = [
     link: "https://silvaesilvaimobiliaria.vercel.app/",
     github: "",
     images: {
-      thumbnail: "/projects/silvaesilva/silvaesilvathumbnail.png",
-      cover: "/projects/silvaesilva/cover.png",
+      thumbnail: "/portfolio/projects/silvaesilva/silvaesilvathumbnail.png",
+      cover: "/portfolio/projects/silvaesilva/cover.png",
       gallery: [
-        "/projects/silvaesilva/silvaesilva-01.png",
-        "/projects/silvaesilva/silvaesilva-02.png",
-        "/projects/silvaesilva/silvaesilva-03.png",
+        "/portfolio/projects/silvaesilva/silvaesilva-01.png",
+        "/portfolio/projects/silvaesilva/silvaesilva-02.png",
+        "/portfolio/projects/silvaesilva/silvaesilva-03.png",
       ],
     },
     technologies: [
@@ -215,12 +215,12 @@ export const projects: Project[] = [
     link: "https://myhubs.com.br",
     github: "",
     images: {
-      thumbnail: "/projects/myhubs/myhubs-thumbnail.png",
-      cover: "/projects/myhubs/cover.webp",
+      thumbnail: "/portfolio/projects/myhubs/myhubs-thumbnail.png",
+      cover: "/portfolio/projects/myhubs/cover.webp",
       gallery: [
-        "/projects/myhubs/myhubs-01.png",
-        "/projects/myhubs/myhubs-02.png",
-        "/projects/myhubs/myhubs-03.png",
+        " /portfolio/projects/myhubs/myhubs-01.png",
+        "/portfolio/projects/myhubs/myhubs-02.png",
+        "/portfolio/projects/myhubs/myhubs-03.png",
       ],
     },
     technologies: ["Next.js", "Tailwind CSS", "TypeScript"],

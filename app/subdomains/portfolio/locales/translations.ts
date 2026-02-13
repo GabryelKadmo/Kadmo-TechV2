@@ -113,6 +113,18 @@ export const translations = {
         },
       },
     },
+    gallery: {
+      title: "Galeria",
+      subtitle: "Meus certificados, diplomas e conquistas",
+      categories: {
+        all: "Todos",
+        certificate: "Certificados",
+        diploma: "Diplomas",
+        // achievement: "Conquistas",
+      },
+      empty: "Nenhum certificado encontrado.",
+      viewCertificate: "Ver certificado",
+    },
     footer: {
       slogan: "Transformando ideias em experiências digitais.",
       copyright: "Todos os direitos reservados.",
@@ -231,6 +243,18 @@ export const translations = {
           azure: "Azure DevOps",
         },
       },
+    },
+    gallery: {
+      title: "Gallery",
+      subtitle: "My certificates, diplomas and achievements",
+      categories: {
+        all: "All",
+        certificate: "Certificates",
+        diploma: "Diplomas",
+        // achievement: "Achievements",
+      },
+      empty: "No certificates found.",
+      viewCertificate: "View certificate",
     },
     footer: {
       slogan: "Transforming ideas into digital experiences.",
