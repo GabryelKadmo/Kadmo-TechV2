@@ -125,6 +125,10 @@ export const translations = {
       empty: "Nenhum certificado encontrado.",
       viewCertificate: "Ver certificado",
     },
+    projects: {
+      title: "Trabalhos Selecionados",
+      viewProject: "Ver Projeto",
+    },
     footer: {
       slogan: "Transformando ideias em experiências digitais.",
       copyright: "Todos os direitos reservados.",
@@ -255,6 +259,10 @@ export const translations = {
       },
       empty: "No certificates found.",
       viewCertificate: "View certificate",
+    },
+    projects: {
+      title: "Selected Works",
+      viewProject: "View Project",
     },
     footer: {
       slogan: "Transforming ideas into digital experiences.",

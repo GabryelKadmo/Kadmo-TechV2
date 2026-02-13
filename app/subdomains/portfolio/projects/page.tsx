@@ -22,7 +22,7 @@ export default function ProjectsPage() {
                     <div className="mb-12 sm:mb-16">
                         <Breadcrumb customLabel="portfolio" />
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
-                            {locale === "pt" ? "Trabalhos Selecionados" : "Selected Works"}
+                            {t.projects.title}
                         </h1>
                     </div>
 
@@ -92,7 +92,7 @@ export default function ProjectsPage() {
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white text-black font-semibold text-xs sm:text-sm uppercase tracking-wide transition-all duration-200 hover:bg-white/90 group/btn"
                                         >
-                                            <span>{locale === "pt" ? "Ver Projeto" : "View Project"}</span>
+                                            <span>{t.projects.viewProject}</span>
                                             <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                                         </a>
                                     )}
