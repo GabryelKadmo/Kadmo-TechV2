@@ -1,7 +1,8 @@
 export const translations = {
   pt: {
     nav: {
-      work: "Projetos",
+      home: "Início",
+      projects: "Projetos",
       gallery: "Galeria",
     },
     sections: {
@@ -119,7 +120,8 @@ export const translations = {
   },
   en: {
     nav: {
-      work: "Work",
+      home: "Home",
+      projects: "Projects",
       gallery: "Gallery",
     },
     sections: {

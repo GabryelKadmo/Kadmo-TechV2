@@ -62,7 +62,36 @@ export default function Navbar() {
                             {/* Divider */}
                             <div className="w-px h-6 bg-white/10 mx-1" />
 
-                            {/* Work e Gallery - com labels */} <Link href="/work" className={` flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${pathname?.startsWith('/subdomains/portfolio/work') ? 'bg-white/10 text-white' : 'text-gray-200 hover:text-white hover:bg-white/5'} `} > <Briefcase className="w-4 h-4" /> <span>{t.nav.work}</span> </Link> <Link href="/gallery" className={` flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${pathname?.startsWith('/subdomains/portfolio/gallery') ? 'bg-white/10 text-white' : 'text-gray-200 hover:text-white hover:bg-white/5'} `} > <Images className="w-4 h-4" /> <span>{t.nav.gallery}</span> </Link> {/* Divider */} <div className="w-px h-6 bg-white/10 mx-1" /> {/* Language Toggle */} <button onClick={toggleLocale} className="px-3 py-2 rounded-full text-sm font-medium cursor-pointer text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-200" aria-label="Toggle language" > {locale === 'en' ? 'EN' : 'PT'} </button> </div> </nav>
+                            {/* Projects e Gallery - com labels */}
+                            <Link
+                                href="/projects"
+                                className={`
+                                    flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
+                                    transition-all duration-200
+                                    ${pathname?.startsWith('/subdomains/portfolio/projects')
+                                        ? 'bg-white/10 text-white'
+                                        : 'text-gray-200 hover:text-white hover:bg-white/5'
+                                    }
+                                `}
+                            >
+                                <Briefcase className="w-4 h-4" />
+                                <span>{t.nav.projects}</span>
+                            </Link>
+
+                            <Link
+                                href="/gallery"
+                                className={`
+                                    flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
+                                    transition-all duration-200
+                                    ${pathname?.startsWith('/subdomains/portfolio/gallery')
+                                        ? 'bg-white/10 text-white'
+                                        : 'text-gray-200 hover:text-white hover:bg-white/5'
+                                    }
+                                `}
+                            >
+                                <Images className="w-4 h-4" />
+                                <span>{t.nav.gallery}</span>
+                            </Link> {/* Divider */} <div className="w-px h-6 bg-white/10 mx-1" /> {/* Language Toggle */} <button onClick={toggleLocale} className="px-3 py-2 rounded-full text-sm font-medium cursor-pointer text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-200" aria-label="Toggle language" > {locale === 'en' ? 'EN' : 'PT'} </button> </div> </nav>
 
                     {/* Time */}
                     <div className="flex items-center text-sm text-gray-200">
@@ -92,13 +121,13 @@ export default function Navbar() {
                     {/* Divider */}
                     <div className="w-px h-6 bg-white/10 mx-1" />
 
-                    {/* Work */}
+                    {/* Projects */}
                     <Link
-                        href="/work"
+                        href="/projects"
                         className={`
                             flex items-center justify-center p-3 rounded-full
                             transition-all duration-200
-                            ${pathname?.startsWith('/subdomains/portfolio/work')
+                            ${pathname?.startsWith('/subdomains/portfolio/projects')
                                 ? 'bg-white/10 text-white'
                                 : 'text-gray-200 hover:text-white hover:bg-white/5'
                             }
@@ -113,7 +142,14 @@ export default function Navbar() {
                         className={`
                             flex items-center justify-center p-3 rounded-full
                             transition-all duration-200
-${pathname?.startsWith('/subdomains/portfolio/gallery') ? 'bg-white/10 text-white' : 'text-gray-200 hover:text-white hover:bg-white/5'} `} > <Images className="w-5 h-5" /> </Link>
+                            ${pathname?.startsWith('/subdomains/portfolio/gallery')
+                                ? 'bg-white/10 text-white'
+                                : 'text-gray-200 hover:text-white hover:bg-white/5'
+                            }
+                        `}
+                    >
+                        <Images className="w-5 h-5" />
+                    </Link>
 
                     {/* Divider */}
                     <div className="w-px h-6 bg-white/10 mx-1" />

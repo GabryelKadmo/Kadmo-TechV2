@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { Briefcase, Package, ArrowUpRight } from 'lucide-react';
-import { getFeaturedProjects } from '@/data/projects';
+import { getFeatured404Projects } from '@/data/projects';
 import { headers } from 'next/headers';
 
 // Função para construir URLs de subdomínios dinamicamente
@@ -43,8 +43,8 @@ export default async function NotFound() {
         },
     ];
 
-    // Busca projetos com destaque
-    const featuredProjects = getFeaturedProjects();
+    // Busca projetos com destaque para a página 404
+    const featuredProjects = getFeatured404Projects();
 
     return (
         <main className="relative min-h-screen w-full overflow-hidden bg-background">

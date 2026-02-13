@@ -24,7 +24,8 @@ export interface Project {
   tags?: string[]; // Tags extras (ex: "freelance", "pessoal", "open-source")
 
   // Status e destaque
-  featured: boolean;
+  featured: boolean; // Exibir na página de Projetos do portfolio
+  featured404: boolean; // Exibir na página 404
   status: "completed" | "in-progress" | "archived";
 
   // Datas
@@ -66,7 +67,7 @@ export const projects: Project[] = [
     link: "https://mx2tech.com.br",
     github: "",
     images: {
-      thumbnail: "/projects/mx2tech/thumbnail.png",
+      thumbnail: "/projects/mx2tech/mx2tech-thumbnail.png",
       cover: "/projects/mx2tech/cover.png",
       gallery: [
         "/projects/mx2tech/mx2tech-01.png",
@@ -92,6 +93,7 @@ export const projects: Project[] = [
       "moderno",
     ],
     featured: true,
+    featured404: true,
     status: "in-progress", // "completed" | "in-progress" | "archived"
     dates: {
       started: "2025-11",
@@ -143,7 +145,7 @@ export const projects: Project[] = [
     link: "https://silvaesilvaimobiliaria.vercel.app/",
     github: "",
     images: {
-      thumbnail: "/projects/silvaesilva/thumbnail.png",
+      thumbnail: "/projects/silvaesilva/silvaesilvathumbnail.png",
       cover: "/projects/silvaesilva/cover.png",
       gallery: [
         "/projects/silvaesilva/silvaesilva-01.png",
@@ -161,6 +163,7 @@ export const projects: Project[] = [
     category: "web", // "web" | "mobile" | "design" | "other"
     tags: ["PropTech", "Imobiliária", "SaaS", "Marketplace"],
     featured: true,
+    featured404: true,
     status: "in-progress", // "completed" | "in-progress" | "archived"
     dates: {
       started: "2024-08",
@@ -212,7 +215,7 @@ export const projects: Project[] = [
     link: "https://myhubs.com.br",
     github: "",
     images: {
-      thumbnail: "/projects/myhubs/thumb.webp",
+      thumbnail: "/projects/myhubs/myhubs-thumbnail.png",
       cover: "/projects/myhubs/cover.webp",
       gallery: [
         "/projects/myhubs/myhubs-01.png",
@@ -224,6 +227,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["SaaS", "B2B", "Integração ERP", "Dashboard", "Automação"],
     featured: true,
+    featured404: true,
     status: "completed",
     dates: {
       started: "2025-06",
@@ -287,6 +291,7 @@ export const projects: Project[] = [
     category: "other", // "web" | "mobile" | "design" | "other"
     tags: ["exemplo"],
     featured: false,
+    featured404: false,
     status: "completed", // "completed" | "in-progress" | "archived"
     dates: {
       started: "2025-11",
@@ -323,6 +328,9 @@ export const projects: Project[] = [
 
 // Helpers para filtrar projetos
 export const getFeaturedProjects = () => projects.filter((p) => p.featured);
+
+export const getFeatured404Projects = () =>
+  projects.filter((p) => p.featured404);
 
 export const getProjectsByCategory = (category: Project["category"]) =>
   projects.filter((p) => p.category === category);
