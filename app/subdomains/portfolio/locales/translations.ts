@@ -32,12 +32,12 @@ export const translations = {
     },
     work: {
       title: "Experiência Profissional",
-      present: "Presente",
+      present: "Atualmente",
       experiences: [
         {
           company: "MX2Tech",
           role: "Desenvolvedor Front-end",
-          period: "Set 2025 - Presente",
+          period: "Set 2025 - Atualmente",
           achievements: [
             "Desenvolvimento e manutenção de aplicações web, com foco em interfaces modernas, responsivas e de fácil usabilidade.",
             "Participação em todas as etapas do Front-end, desde a criação de layouts baseados em princípios de UX/UI até a integração e consumo de APIs.",
