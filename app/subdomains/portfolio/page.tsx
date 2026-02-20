@@ -29,7 +29,7 @@ export default function PortfolioPage() {
                         {/* Avatar */}
                         <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/10 flex-shrink-0">
                             <Image
-                                src="/portfolio/Balduino IV.jpg"
+                                src="/myself/Me-pfp-paint-gray.webp"
                                 alt="Profile"
                                 width={96}
                                 height={96}
@@ -62,7 +62,7 @@ export default function PortfolioPage() {
                             {/* Avatar */}
                             <div className="portfolio-avatar w-48 h-48 rounded-full overflow-hidden border-2 border-white/10">
                                 <Image
-                                    src="/portfolio/Balduino IV.jpg"
+                                    src="/myself/Me-pfp-paint-gray.webp"
                                     alt="Profile"
                                     width={192}
                                     height={192}
