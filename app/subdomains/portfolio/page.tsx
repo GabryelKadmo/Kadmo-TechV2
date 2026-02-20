@@ -220,7 +220,7 @@ export default function PortfolioPage() {
                                         {Object.values(t.technical.frontend.tags).map((tag, idx) => (
                                             <span
                                                 key={idx}
-                                                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-full text-xs sm:text-sm text-gray-300 hover:bg-white/10 hover:border-white/20 transition-all"
+                                                className="px-3 sm:px-4 py-1.5 sm:py-2 select-none bg-white/5 border border-white/10 rounded-full text-xs sm:text-sm text-gray-300 hover:bg-white/10 hover:border-white/20 transition-all"
                                             >
                                                 {tag}
                                             </span>
@@ -240,7 +240,7 @@ export default function PortfolioPage() {
                                         {Object.values(t.technical.backend.tags).map((tag, idx) => (
                                             <span
                                                 key={idx}
-                                                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-full text-xs sm:text-sm text-gray-300 hover:bg-white/10 hover:border-white/20 transition-all"
+                                                className="px-3 sm:px-4 py-1.5 sm:py-2 select-none bg-white/5 border border-white/10 rounded-full text-xs sm:text-sm text-gray-300 hover:bg-white/10 hover:border-white/20 transition-all"
                                             >
                                                 {tag}
                                             </span>
@@ -260,7 +260,7 @@ export default function PortfolioPage() {
                                         {Object.values(t.technical.tools.tags).map((tag, idx) => (
                                             <span
                                                 key={idx}
-                                                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-full text-xs sm:text-sm text-gray-300 hover:bg-white/10 hover:border-white/20 transition-all"
+                                                className="px-3 sm:px-4 select-none py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-full text-xs sm:text-sm text-gray-300 hover:bg-white/10 hover:border-white/20 transition-all"
                                             >
                                                 {tag}
                                             </span>
