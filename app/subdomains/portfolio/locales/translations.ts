@@ -12,7 +12,7 @@ export const translations = {
       technicalSkills: "Habilidades Técnicas",
     },
     profile: {
-      location: "Brasil/Bahia",
+      location: "Brasil",
       languages: {
         portuguese: "Português",
         english: "Inglês",
@@ -147,7 +147,7 @@ export const translations = {
       technicalSkills: "Technical Skills",
     },
     profile: {
-      location: "Brazil/Bahia",
+      location: "Brazil",
       languages: {
         portuguese: "Portuguese",
         english: "English",
