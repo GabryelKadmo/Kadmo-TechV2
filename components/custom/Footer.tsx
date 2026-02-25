@@ -1,8 +1,11 @@
 'use client'
 
 import React from 'react'
+import { useSubdomainUrls } from '@/lib/useSubdomainUrls'
 
 export default function Footer() {
+    const urls = useSubdomainUrls();
+
     return (
         <footer id="contact" className="relative w-full overflow-hidden bg-background scroll-mt-0">
             {/* Main Container */}
@@ -94,7 +97,34 @@ export default function Footer() {
 
                 {/* Bottom Section - Copyright */}
                 <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-                    <div className="max-w-md">
+                    <div className="space-y-6">
+                        {/* Links para subdomains */}
+                        <div className="space-y-3">
+                            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                                Explorar
+                            </p>
+                            <div className="flex flex-col gap-2">
+                                <a
+                                    href={urls?.portfolio ?? '#'}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 font-mono text-foreground transition-colors hover:text-foreground/80 w-fit"
+                                >
+                                    <span className="text-sm">Portfolio</span>
+                                    <div className="h-px w-0 bg-foreground transition-all group-hover:w-8" />
+                                </a>
+                                <a
+                                    href={urls?.templates ?? '#'}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 font-mono text-foreground transition-colors hover:text-foreground/80 w-fit"
+                                >
+                                    <span className="text-sm">Templates</span>
+                                    <div className="h-px w-0 bg-foreground transition-all group-hover:w-8" />
+                                </a>
+                            </div>
+                        </div>
+
                         <p className="font-mono text-sm text-muted-foreground">
                             © {new Date().getFullYear()} Gabryel Kadmo. Bacharel em Sistemas de Informação.
                         </p>

@@ -1,54 +1,40 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Briefcase, Images } from 'lucide-react';
+import Link from 'next/link';
+import { Briefcase, Images, Globe, LayoutTemplate } from 'lucide-react';
 import { useLocale } from '../contexts/LocaleContext';
 import { translations } from '../locales/translations';
+import { useSubdomainUrls } from '@/lib/useSubdomainUrls';
 
 export default function Navbar() {
     const pathname = usePathname();
-    const [time, setTime] = useState('');
     const { locale, toggleLocale } = useLocale();
     const t = translations[locale];
-
-    useEffect(() => {
-        const updateTime = () => {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('pt-BR', {
-                timeZone: 'America/Sao_Paulo',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false,
-            });
-            setTime(timeString);
-        };
-
-        updateTime();
-        const interval = setInterval(updateTime, 1000);
-        return () => clearInterval(interval);
-    }, []);
+    const urls = useSubdomainUrls();
 
     return (
         <>
             {/* Desktop Navigation - Top */}
             <header className="hidden md:block fixed top-4 left-0 right-0 z-50 px-4">
                 <div className="max-w-full mx-auto flex items-center justify-between">
-                    {/* Location */}
-                    <div className="flex items-center text-sm text-gray-200">
-                        America/Sao_Paulo
-                    </div>
+                    {/* Left — site principal */}
+                    <a
+                        href={urls?.main ?? '#'}
+                        className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                    >
+                        <Globe className="w-4 h-4" />
+                        <span className="tracking-wide">kadmo.com.br</span>
+                    </a>
 
                     {/* Center Navigation */}
                     <nav className="flex-1 flex justify-center">
                         <div className="flex items-center gap-1 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full p-1.5 shadow-2xl">
-                            {/* Home - apenas ícone */}
+                            {/* Portfolio (home do subdomain) */}
                             <Link
                                 href="/"
                                 className={`
-                                    flex items-center justify-center p-2 rounded-full text-sm font-medium
+                                    flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
                                     transition-all duration-200
                                     ${pathname === '/subdomains/portfolio'
                                         ? 'bg-white/10 text-white'
@@ -56,13 +42,13 @@ export default function Navbar() {
                                     }
                                 `}
                             >
-                                <Home className="w-4 h-4" />
+                                <span>Portfolio</span>
                             </Link>
 
                             {/* Divider */}
                             <div className="w-px h-6 bg-white/10 mx-1" />
 
-                            {/* Projects e Gallery - com labels */}
+                            {/* Projects */}
                             <Link
                                 href="/projects"
                                 className={`
@@ -78,6 +64,7 @@ export default function Navbar() {
                                 <span>{t.nav.projects}</span>
                             </Link>
 
+                            {/* Gallery */}
                             <Link
                                 href="/gallery"
                                 className={`
@@ -91,23 +78,41 @@ export default function Navbar() {
                             >
                                 <Images className="w-4 h-4" />
                                 <span>{t.nav.gallery}</span>
-                            </Link> {/* Divider */} <div className="w-px h-6 bg-white/10 mx-1" /> {/* Language Toggle */} <button onClick={toggleLocale} className="px-3 py-2 rounded-full text-sm font-medium cursor-pointer text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-200" aria-label="Toggle language" > {locale === 'en' ? 'EN' : 'PT'} </button> </div> </nav>
+                            </Link>
 
-                    {/* Time */}
-                    <div className="flex items-center text-sm text-gray-200">
-                        {time}
-                    </div>
+                            {/* Divider */}
+                            <div className="w-px h-6 bg-white/10 mx-1" />
+
+                            {/* Language Toggle */}
+                            <button
+                                onClick={toggleLocale}
+                                className="px-3 py-2 rounded-full text-sm font-medium cursor-pointer text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-200"
+                                aria-label="Toggle language"
+                            >
+                                {locale === 'en' ? 'EN' : 'PT'}
+                            </button>
+                        </div>
+                    </nav>
+
+                    {/* Right — templates */}
+                    <a
+                        href={urls?.templates ?? '#'}
+                        className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                    >
+                        <LayoutTemplate className="w-4 h-4" />
+                        <span className="tracking-wide">Templates</span>
+                    </a>
                 </div>
             </header>
 
-            {/* Mobile Bottom Navigation */}
+            {/* Mobile Navigation */}
             <nav className="md:hidden fixed top-6 left-4 right-4 z-50">
                 <div className="flex items-center justify-center gap-1 bg-black/40 backdrop-blur-xl border border-white/10 rounded-full p-1.5 shadow-2xl">
-                    {/* Home - apenas ícone */}
+                    {/* Portfolio */}
                     <Link
                         href="/"
                         className={`
-                            flex items-center justify-center p-3 rounded-full
+                            flex items-center justify-center px-3 py-2 rounded-full text-xs font-medium
                             transition-all duration-200
                             ${pathname === '/subdomains/portfolio'
                                 ? 'bg-white/10 text-white'
@@ -115,17 +120,17 @@ export default function Navbar() {
                             }
                         `}
                     >
-                        <Home className="w-5 h-5" />
+                        Portfolio
                     </Link>
 
                     {/* Divider */}
-                    <div className="w-px h-6 bg-white/10 mx-1" />
+                    <div className="w-px h-6 bg-white/10 mx-0.5" />
 
                     {/* Projects */}
                     <Link
                         href="/projects"
                         className={`
-                            flex items-center justify-center p-3 rounded-full
+                            flex items-center justify-center p-2.5 rounded-full
                             transition-all duration-200
                             ${pathname?.startsWith('/subdomains/portfolio/projects')
                                 ? 'bg-white/10 text-white'
@@ -133,14 +138,14 @@ export default function Navbar() {
                             }
                         `}
                     >
-                        <Briefcase className="w-5 h-5" />
+                        <Briefcase className="w-4 h-4" />
                     </Link>
 
                     {/* Gallery */}
                     <Link
                         href="/gallery"
                         className={`
-                            flex items-center justify-center p-3 rounded-full
+                            flex items-center justify-center p-2.5 rounded-full
                             transition-all duration-200
                             ${pathname?.startsWith('/subdomains/portfolio/gallery')
                                 ? 'bg-white/10 text-white'
@@ -148,20 +153,31 @@ export default function Navbar() {
                             }
                         `}
                     >
-                        <Images className="w-5 h-5" />
+                        <Images className="w-4 h-4" />
                     </Link>
 
                     {/* Divider */}
-                    <div className="w-px h-6 bg-white/10 mx-1" />
+                    <div className="w-px h-6 bg-white/10 mx-0.5" />
 
                     {/* Language Toggle */}
                     <button
                         onClick={toggleLocale}
-                        className="flex items-center justify-center px-3 py-3 rounded-full text-sm font-medium text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-200"
+                        className="flex items-center justify-center px-2.5 py-2.5 rounded-full text-xs font-medium text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-200"
                         aria-label="Toggle language"
                     >
                         {locale === 'en' ? 'EN' : 'PT'}
                     </button>
+
+                    {/* Divider */}
+                    <div className="w-px h-6 bg-white/10 mx-0.5" />
+
+                    {/* Site principal */}
+                    <a
+                        href={urls?.main ?? '#'}
+                        className="flex items-center justify-center p-2.5 rounded-full text-gray-200 hover:text-white hover:bg-white/5 transition-all duration-200"
+                    >
+                        <Globe className="w-4 h-4" />
+                    </a>
                 </div>
             </nav>
         </>
