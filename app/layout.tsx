@@ -130,8 +130,8 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "BR",
     "geo.placename": "Brasil",
-    "theme-color": "#ef4444",
-    "msapplication-TileColor": "#ef4444",
+    "theme-color": "#000000",
+    "msapplication-TileColor": "#000000",
     "msapplication-config": "/browserconfig.xml",
   },
 };
